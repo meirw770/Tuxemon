@@ -3,8 +3,8 @@
   "name": "professor",
   "gender": "male",
   "sprite_name": "professor",
-  "combat_front": "professor_front.png",
-  "combat_back": "red_back.png",
+  "combat_front": "professor.png",
+  "combat_back": "adventurer_back.png",
   "monsters": [
     {
       "attack": 4,
@@ -15,7 +15,7 @@
       "name": "Tweesher",
       "level": 3,
       "slug": "tweesher",
-      "exp_give_mod": 6,
+      "money_mod": 6,
       "exp_req_mod": 27,
       "gender": "female"
     }

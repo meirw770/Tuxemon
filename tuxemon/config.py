@@ -1,32 +1,5 @@
-#
-# Tuxemon
-# Copyright (C) 2014, William Edwards <shadowapex@gmail.com>,
-#                     Benjamin Bean <superman2k5@gmail.com>
-#
-# This file is part of Tuxemon.
-#
-# Tuxemon is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-#
-# Tuxemon is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with Tuxemon.  If not, see <http://www.gnu.org/licenses/>.
-#
-# Contributor(s):
-#
-# William Edwards <shadowapex@gmail.com>
-# Leif Theden <leif.theden@gmail.com>
-#
-#
-# config Configuration parser.
-#
-#
+# SPDX-License-Identifier: GPL-3.0
+# Copyright (c) 2014-2023 William Edwards <shadowapex@gmail.com>, Benjamin Bean <superman2k5@gmail.com>
 from __future__ import annotations
 
 from typing import Any, Dict, Mapping, Optional
@@ -96,6 +69,8 @@ class TuxemonConfig:
             "net_controller_enabled",
         )
         self.locale = cfg.get("game", "locale")
+        self.hemisphere = cfg.get("game", "hemisphere")
+        self.unit = cfg.get("game", "unit")
         self.dev_tools = cfg.getboolean("game", "dev_tools")
         self.recompile_translations = cfg.getboolean(
             "game",
@@ -275,6 +250,8 @@ def get_defaults() -> Mapping[str, Any]:
                         ("cli_enabled", False),
                         ("net_controller_enabled", False),
                         ("locale", "en_US"),
+                        ("hemisphere", "north"),
+                        ("unit", "metric"),
                         ("dev_tools", False),
                         ("recompile_translations", True),
                         ("compress_save", None),

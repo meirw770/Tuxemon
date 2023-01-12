@@ -9,23 +9,36 @@
         },
         {
             "level_learned": 2,
+            "technique": "fire_ball"
+        },
+        {
+            "level_learned": 12,
+            "technique": "fume"
+        },
+        {
+            "level_learned": 28,
             "technique": "kindling_flame"
         },
         {
-            "level_learned": 2,
+            "level_learned": 32,
             "technique": "energy_claws"
+        },
+        {
+            "level_learned": 34,
+            "technique": "breathe_fire"
         }
     ],
     "evolutions": [
         {
-            "path": "",
+            "path": "standard",
             "at_level": 36,
             "monster_slug": "agnigon"
         }
     ],
     "shape": "dragon",
+    "stage": "stage1",
     "types": [
-        "Fire"
+        "fire"
     ],
     "possible_genders": ["male", "female"],
     "txmn_id": 14,

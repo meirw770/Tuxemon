@@ -2,9 +2,8 @@
   "tech_id": 10,
   "accuracy": 0.5,
   "animation": "watershot",
-  "category": "physical",
   "effects": [
-    "damage"
+    "damage 100"
   ],
   "flip_axes": "x",
   "healing_power": 0,
@@ -18,7 +17,7 @@
   "slug": "flood",
   "sort": "damage",
   "target": {
-    "enemy monster": 0,
+    "enemy monster": 2,
     "enemy team": 2,
     "enemy trainer": 0,
     "item": 0,

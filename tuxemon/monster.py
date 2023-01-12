@@ -1,32 +1,5 @@
-#
-# Tuxemon
-# Copyright (C) 2014, William Edwards <shadowapex@gmail.com>,
-#                     Benjamin Bean <superman2k5@gmail.com>
-#
-# This file is part of Tuxemon.
-#
-# Tuxemon is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-#
-# Tuxemon is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with Tuxemon.  If not, see <http://www.gnu.org/licenses/>.
-#
-# Contributor(s):
-#
-# William Edwards <shadowapex@gmail.com>
-#
-#
-# monster Tuxemon monster module
-#
-#
-
+# SPDX-License-Identifier: GPL-3.0
+# Copyright (c) 2014-2023 William Edwards <shadowapex@gmail.com>, Benjamin Bean <superman2k5@gmail.com>
 from __future__ import annotations
 
 import logging
@@ -34,13 +7,16 @@ import random
 import uuid
 from typing import TYPE_CHECKING, Any, Dict, List, Mapping, Optional, Sequence
 
-from tuxemon import ai, fusion, graphics
+from tuxemon import ai, formula, fusion, graphics
 from tuxemon.config import TuxemonConfig
 from tuxemon.db import (
+    ElementType,
+    EvolutionStage,
     GenderType,
     MonsterEvolutionItemModel,
     MonsterMovesetItemModel,
     MonsterShape,
+    StatType,
     db,
 )
 from tuxemon.locale import T
@@ -64,6 +40,9 @@ SIMPLE_PERSISTANCE_ATTRIBUTES = (
     "total_experience",
     "flairs",
     "gender",
+    "capture",
+    "height",
+    "weight",
 )
 
 SHAPES = {
@@ -224,6 +203,7 @@ class Monster:
         self.moves: List[Technique] = []
         self.moveset: List[MonsterMovesetItemModel] = []
         self.evolutions: List[MonsterEvolutionItemModel] = []
+        self.stage = EvolutionStage.standalone
         self.flairs: Dict[str, Flair] = {}
         self.battle_cry = ""
         self.faint_cry = ""
@@ -231,19 +211,18 @@ class Monster:
         self.owner: Optional[NPC] = None
         self.possible_genders: List[GenderType] = []
 
-        self.experience_give_modifier = 1
+        self.money_modifier = 0
         self.experience_required_modifier = 1
         self.total_experience = 0
 
-        self.type1 = "aether"
-        self.type2: Optional[str] = None
+        self.type1 = ElementType.aether
+        self.type2: Optional[ElementType] = None
         self.shape = MonsterShape.landrace
 
-        self.status: List[Technique] = list()
-        self.status_damage = 0
-        self.status_turn = 0
+        self.status: List[Technique] = []
 
         self.txmn_id = 0
+        self.capture = 0
         self.height = 0.0
         self.weight = 0.0
 
@@ -282,32 +261,6 @@ class Monster:
         self.set_stats()
         self.set_flairs()
 
-    def spawn(self, father: Monster) -> Monster:
-        """
-        Spawn a child monster.
-
-        Creates a new Monster, with this monster as the mother and the passed
-        in monster as father.
-
-        Parameters:
-            The monster.Monster to be father of this monsterous child.
-
-        Returns:
-            Child monster.
-
-        """
-        child = Monster()
-        child.load_from_db(self.slug)
-        child.set_level(5)
-
-        father_tech_count = len(father.moves)
-        tech_to_replace = random.randrange(0, 2)
-        child.moves[tech_to_replace] = father.moves[
-            random.randrange(0, father_tech_count - 1)
-        ]
-
-        return child
-
     def load_from_db(self, slug: str) -> None:
         """
         Loads and sets this monster's attributes from the monster.db database.
@@ -330,15 +283,17 @@ class Monster:
         self.description = T.translate(f"{results.slug}_description")
         self.category = T.translate(results.category)
         self.shape = results.shape or MonsterShape.landrace
+        self.stage = results.stage or EvolutionStage.standalone
         types = results.types
         if types:
-            self.type1 = results.types[0].lower()
+            self.type1 = results.types[0]
             if len(types) > 1:
-                self.type2 = results.types[1].lower()
+                self.type2 = results.types[1]
 
         self.txmn_id = results.txmn_id
-        self.height = results.height
-        self.weight = results.weight
+        self.capture = self.set_capture(self.capture)
+        self.height = self.set_char_height(results.height)
+        self.weight = self.set_char_weight(results.weight)
         self.gender = random.choice(list(results.possible_genders))
         self.catch_rate = (
             results.catch_rate or TuxemonConfig().default_monster_catch_rate
@@ -410,6 +365,29 @@ class Monster:
 
         self.moves.append(technique)
 
+    def return_stat(
+        self,
+        stat: StatType,
+    ) -> int:
+        """
+        Returns a monster stat (eg. melee, armour, etc.).
+
+        Parameters:
+            stat: The stat for the monster to return.
+        """
+        if stat == StatType.armour:
+            return self.armour
+        elif stat == StatType.dodge:
+            return self.dodge
+        elif stat == StatType.hp:
+            return self.hp
+        elif stat == StatType.melee:
+            return self.melee
+        elif stat == StatType.ranged:
+            return self.ranged
+        elif stat == StatType.speed:
+            return self.speed
+
     def give_experience(self, amount: int = 1) -> None:
         """
         Increase experience.
@@ -433,13 +411,43 @@ class Monster:
 
     def apply_status(self, status: Technique) -> None:
         """
-        Apply a status to the monster.
+        Apply a status to the monster by replacing or removing
+        the previous status.
 
         Parameters:
             status: The status technique.
 
         """
-        self.status.append(status)
+        count_status = len(self.status)
+        if count_status == 0:
+            self.status.append(status)
+        else:
+            # if the status exists
+            if any(t for t in self.status if t.slug == status):
+                return
+            # if the status doesn't exist.
+            else:
+                if self.status[0].category == "positive":
+                    if status.repl_pos == "replace":
+                        self.status.clear()
+                        self.status.append(status)
+                    elif status.repl_pos == "remove":
+                        self.status.clear()
+                    else:
+                        # noddingoff, exhausted, festering, dozing
+                        return
+                elif self.status[0].category == "negative":
+                    if status.repl_neg == "replace":
+                        self.status.clear()
+                        self.status.append(status)
+                    elif status.repl_pos == "remove":
+                        self.status.clear()
+                    else:
+                        # chargedup, charging and dozing
+                        return
+                else:
+                    # spyderbite and eliminated
+                    self.status.append(status)
 
     def set_stats(self) -> None:
         """
@@ -462,6 +470,42 @@ class Monster:
         self.melee = shape["melee"] * multiplier
         self.ranged = shape["ranged"] * multiplier
         self.speed = shape["speed"] * multiplier
+
+    def set_capture(self, amount: int) -> int:
+        """
+        It returns the capture date.
+        """
+        if amount == 0:
+            result = formula.today_ordinal()
+            self.capture = result
+            return self.capture
+        else:
+            self.capture = amount
+            return self.capture
+
+    def set_char_weight(self, value: float) -> float:
+        """
+        Set weight for each monster.
+
+        """
+        if self.weight == value:
+            result = value
+            return result
+        else:
+            result = formula.set_weight(value)
+            return result
+
+    def set_char_height(self, value: float) -> float:
+        """
+        Set height for each monster.
+
+        """
+        if self.weight == value:
+            result = value
+            return result
+        else:
+            result = formula.set_height(value)
+            return result
 
     def level_up(self) -> None:
         """
@@ -514,7 +558,10 @@ class Monster:
 
         # Update moves
         for move in self.moveset:
-            if move not in self.moves and move.level_learned <= level:
+            if (
+                move.technique not in (m.slug for m in self.moves)
+                and move.level_learned <= level
+            ):
                 self.learn(Technique(move.technique))
 
     def experience_required(self, level_ofs: int = 0) -> int:
@@ -689,9 +736,9 @@ class Monster:
         assert isinstance(action.technique, Technique)
         technique = action.technique
         if technique.is_fast:
-            return int(random.randrange(0, self.speed) * 1.5)
+            return int(random.randrange(0, int(self.speed)) * 1.5)
         else:
-            return random.randrange(0, self.speed)
+            return random.randrange(0, int(self.speed))
 
 
 def decode_monsters(

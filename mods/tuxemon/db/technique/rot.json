@@ -2,8 +2,9 @@
   "tech_id": 38,
   "accuracy": 1,
   "animation": "drip_green",
-  "category": "physical",
-  "effects": [],
+  "effects": [
+    "poison target"
+  ],
   "flip_axes": "",
   "healing_power": 0,
   "icon": "",

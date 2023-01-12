@@ -2,9 +2,9 @@
   "tech_id": 18,
   "accuracy": 0.8,
   "animation": "crystal",
-  "category": "physical",
   "effects": [
-    "damage"
+    "blinded target",
+    "damage 100"
   ],
   "flip_axes": "",
   "healing_power": 0,

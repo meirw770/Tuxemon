@@ -2,9 +2,9 @@
   "tech_id": 87,
   "accuracy": 0.8,
   "animation": "lance_ice",
-  "category": "physical",
   "effects": [
-    "damage"
+    "poison target",
+    "damage 100"
   ],
   "flip_axes": "xy",
   "healing_power": 0,

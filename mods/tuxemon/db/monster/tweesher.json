@@ -12,20 +12,21 @@
             "technique": "flow"
         },
         {
-            "level_learned": 2,
+            "level_learned": 12,
             "technique": "energy_field"
         }
     ],
     "evolutions": [
         {
-            "path": "",
+            "path": "standard",
             "at_level": 24,
             "monster_slug": "heronquak"
         }
     ],
     "shape": "flier",
+    "stage": "basic",
     "types": [
-        "Water"
+        "water"
     ],
     "possible_genders": ["male", "female"],
     "txmn_id": 7,

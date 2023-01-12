@@ -12,20 +12,21 @@
             "technique": "static_field"
         },
         {
-            "level_learned": 2,
+            "level_learned": 6,
             "technique": "shuriken"
         }
     ],
     "evolutions": [
         {
-            "path": "",
+            "path": "standard",
             "at_level": 9,
             "monster_slug": "bolt"
         }
     ],
     "shape": "blob",
+    "stage": "basic",
     "types": [
-        "Metal"
+        "metal"
     ],
     "possible_genders": ["male", "female"],
     "txmn_id": 4,

@@ -7,11 +7,11 @@
       "name": "Lapinou",
       "level": 30,
       "slug": "lapinou",
-      "exp_give_mod": 3,
+      "money_mod": 10,
       "exp_req_mod": 27,
       "gender": "female"
     }
   ],
   "combat_front": "lapinou.png",
-  "combat_back": "red_back.png"
+  "combat_back": "adventurer_back.png"
 }

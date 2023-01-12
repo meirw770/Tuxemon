@@ -12,23 +12,24 @@
             "technique": "berserk"
         },
         {
-            "level_learned": 2,
+            "level_learned": 12,
             "technique": "one_two"
         }
     ],
     "evolutions": [
         {
-            "path": "",
+            "path": "standard",
             "at_level": 18,
             "monster_slug": "corvix"
         }
     ],
     "shape": "flier",
+    "stage": "basic",
     "types": [
-        "Metal"
+        "metal"
     ],
     "possible_genders": ["male", "female"],
-    "txmn_id": 150,
+    "txmn_id": 156,
     "height": 70,
     "weight": 6,
     "catch_rate": 85.0,

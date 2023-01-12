@@ -2,9 +2,10 @@
   "tech_id": 63,
   "accuracy": 0.75,
   "animation": "triforce",
-  "category": "physical",
   "effects": [
-    "damage"
+    "damage 100",
+    "enraged user",
+    "grabbed target"
   ],
   "flip_axes": "xy",
   "healing_power": 0,

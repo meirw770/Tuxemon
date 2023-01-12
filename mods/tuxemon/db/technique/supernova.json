@@ -2,9 +2,9 @@
   "tech_id": 81,
   "accuracy": 0.75,
   "animation": "fireball_114",
-  "category": "physical",
   "effects": [
-    "damage"
+    "damage 100",
+    "chargedup target"
   ],
   "flip_axes": "x",
   "healing_power": 0,

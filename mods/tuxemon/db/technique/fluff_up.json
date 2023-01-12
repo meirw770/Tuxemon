@@ -2,9 +2,9 @@
   "tech_id": 71,
   "accuracy": 0.75,
   "animation": "smokebomb",
-  "category": "physical",
   "effects": [
-    "damage"
+    "damage 100",
+    "recover all"
   ],
   "flip_axes": "",
   "healing_power": 0,

@@ -1,13 +1,13 @@
 {
   "slug": "spyder_route6_orion",
   "gender": "male",
-  "sprite_name": "professor1",
+  "sprite_name": "professor",
   "monsters": [
     {
       "name": "Spighter",
       "level": 20,
       "slug": "spighter",
-      "exp_give_mod": 3,
+      "money_mod": 10,
       "exp_req_mod": 27,
       "gender": "male"
     },
@@ -15,11 +15,11 @@
       "name": "Zunna",
       "level": 30,
       "slug": "zunna",
-      "exp_give_mod": 3,
+      "money_mod": 10,
       "exp_req_mod": 27,
       "gender": "male"
     }
   ],
   "combat_front": "professor.png",
-  "combat_back": "red_back.png"
+  "combat_back": "adventurer_back.png"
 }

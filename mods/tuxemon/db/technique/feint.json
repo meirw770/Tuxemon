@@ -2,9 +2,9 @@
   "tech_id": 36,
   "accuracy": 1,
   "animation": "bolt",
-  "category": "physical",
   "effects": [
-    "damage"
+    "damage 100",
+    "focused user"
   ],
   "flip_axes": "",
   "healing_power": 0,

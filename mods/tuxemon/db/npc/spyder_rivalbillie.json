@@ -1,16 +1,16 @@
 {
   "slug": "spyder_billie",
   "gender": "female",
-  "sprite_name": "misa",
+  "sprite_name": "fashionista",
   "monsters": [
     {
       "slug": "dollfin",
       "level": 5,
-      "exp_give_mod": 3,
+      "money_mod": 10,
       "exp_req_mod": 27,
       "gender": "male"
     }
   ],
   "combat_front": "fashionista.png",
-  "combat_back": "red_back.png"
+  "combat_back": "adventurer_back.png"
 }

@@ -2,9 +2,9 @@
   "tech_id": 62,
   "accuracy": 0.75,
   "animation": "screen",
-  "category": "physical",
   "effects": [
-    "damage"
+    "hardshell user",
+    "damage 100"
   ],
   "flip_axes": "x",
   "healing_power": 0,

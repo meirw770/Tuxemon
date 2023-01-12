@@ -2,9 +2,9 @@
   "tech_id": 82,
   "accuracy": 1,
   "animation": null,
-  "category": "physical",
   "effects": [
-    "statchange"
+    "sniping target",
+    "sniping user"
   ],
   "flip_axes": "",
   "healing_power": 0,
@@ -13,9 +13,6 @@
   "is_fast": false,
   "potency": 1,
   "power": 0,
-  "statdodge": {
-    "value": 4, "max_deviation": 2, "operation":"+", "overridetofull":false
-  },
   "range": "special",
   "recharge": 2,
   "sfx": "sfx_blaster",

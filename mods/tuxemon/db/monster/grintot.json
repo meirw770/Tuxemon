@@ -12,35 +12,40 @@
             "technique": "sand_spray"
         },
         {
-            "level_learned": 2,
+            "level_learned": 12,
             "technique": "avalanche"
         }
     ],
     "evolutions": [
         {
-            "path": "earth_booster",
+            "path": "item",
             "at_level": 0,
-            "monster_slug": "grinflare"
+            "monster_slug": "grinflare",
+            "item": "earth_booster"
         },
         {
-            "path": "flintstone",
+            "path": "item",
             "at_level": 0,
-            "monster_slug": "grinflare"
+            "monster_slug": "grinflare",
+            "item": "flintstone"
         },
         {
-            "path": "metal_booster",
+            "path": "item",
             "at_level": 0,
-            "monster_slug": "grintrock"
+            "monster_slug": "grintrock",
+            "item": "metal_booster"
         },
         {
-            "path": "thunderstone",
+            "path": "item",
             "at_level": 0,
-            "monster_slug": "grintrock"
+            "monster_slug": "grintrock",
+            "item": "thunderstone"
         }
     ],
     "shape": "brute",
+    "stage": "basic",
     "types": [
-        "Earth"
+        "earth"
     ],
     "possible_genders": ["male", "female"],
     "txmn_id": 16,

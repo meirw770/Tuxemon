@@ -2,9 +2,9 @@
   "tech_id": 79,
   "accuracy": 0.8,
   "animation": "sparks_red",
-  "category": "physical",
   "effects": [
-    "damage"
+    "damage 100",
+    "lifeleech all"
   ],
   "flip_axes": "",
   "healing_power": 0,

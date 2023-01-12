@@ -1,38 +1,16 @@
-#
-# Tuxemon
-# Copyright (C) 2014, William Edwards <shadowapex@gmail.com>,
-#                     Benjamin Bean <superman2k5@gmail.com>
-#
-# This file is part of Tuxemon.
-#
-# Tuxemon is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-#
-# Tuxemon is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with Tuxemon.  If not, see <http://www.gnu.org/licenses/>.
-#
-# Contributor(s):
-#
-# Yisroel Newmark <ymnewmark@gmail.com>
-#
-#
-#
-#
-
+# SPDX-License-Identifier: GPL-3.0
+# Copyright (c) 2014-2023 William Edwards <shadowapex@gmail.com>, Benjamin Bean <superman2k5@gmail.com>
 from __future__ import annotations
 
+import datetime as dt
 import logging
+import random
 from typing import TYPE_CHECKING, NamedTuple, Optional, Sequence, Tuple
 
 if TYPE_CHECKING:
+    from tuxemon.db import OutputBattle
     from tuxemon.monster import Monster
+    from tuxemon.npc import NPC
     from tuxemon.technique.technique import Technique
 
 logger = logging.getLogger(__name__)
@@ -123,8 +101,7 @@ def simple_damage_calculate(
         target_resist = 1
     else:
         raise RuntimeError(
-            "unhandled damage category %s %s",
-            technique.category,
+            "unhandled damage category %s",
             technique.range,
         )
 
@@ -138,7 +115,6 @@ def simple_damage_calculate(
 
 
 def simple_poison(
-    technique: Technique,
     target: Monster,
 ) -> int:
     """
@@ -157,7 +133,6 @@ def simple_poison(
 
 
 def simple_recover(
-    technique: Technique,
     target: Monster,
 ) -> int:
     """
@@ -176,7 +151,6 @@ def simple_recover(
 
 
 def simple_lifeleech(
-    technique: Technique,
     user: Monster,
     target: Monster,
 ) -> int:
@@ -203,3 +177,159 @@ def simple_overfeed(
 ) -> int:
     speed = target.speed // 2
     return speed
+
+
+def simple_grabbed(monster: Monster) -> None:
+    for move in monster.moves:
+        if move.range.ranged:
+            move.potency = move.default_potency * 0.5
+            move.power = move.default_power * 0.5
+        elif move.range.reach:
+            move.potency = move.default_potency * 0.5
+            move.power = move.default_power * 0.5
+
+
+def simple_stuck(monster: Monster) -> None:
+    for move in monster.moves:
+        if move.range.melee:
+            move.potency = move.default_potency * 0.5
+            move.power = move.default_power * 0.5
+        elif move.range.touch:
+            move.potency = move.default_potency * 0.5
+            move.power = move.default_power * 0.5
+
+
+def escape(level_user: int, level_target: int, attempts: int) -> bool:
+    escape = 0.4 + (0.15 * (attempts + level_user - level_target))
+    if random.random() <= escape:
+        return True
+    else:
+        return False
+
+
+def today_ordinal() -> int:
+    """
+    It gives today's proleptic Gregorian ordinal.
+    """
+    today = dt.date.today().toordinal()
+    return today
+
+
+def set_weight(kg: float) -> float:
+    """
+    It generates a personalized weight,
+    random number: between +/- 10%.
+    Eg 100 kg +/- 10 kg
+    """
+    if kg == 0:
+        weight = kg
+    else:
+        minor = kg - (kg * 0.1)
+        major = (kg * 0.1) + kg
+        weight = round(random.uniform(minor, major), 2)
+    return weight
+
+
+def set_height(cm: float) -> float:
+    """
+    It generates a personalized height,
+    random number: between +/- 10%.
+    Eg 100 cm +/- 10 cm
+    """
+    if cm == 0:
+        height = cm
+    else:
+        minor = cm - (cm * 0.1)
+        major = (cm * 0.1) + cm
+        height = round(random.uniform(minor, major), 2)
+    return height
+
+
+def convert_lbs(kg: float) -> float:
+    """
+    It converts kilograms into pounds.
+    """
+    pounds = round(kg * 2.2046, 2)
+    return pounds
+
+
+def convert_ft(cm: float) -> float:
+    """
+    It converts centimeters into feet.
+    """
+    foot = round(cm * 0.032808399, 2)
+    return foot
+
+
+def convert_km(steps: float) -> float:
+    """
+    It converts steps into kilometers.
+    One tile: 1 meter
+    """
+    m = steps * 1
+    km = round(m / 1000, 2)
+    return km
+
+
+def convert_mi(steps: float) -> float:
+    """
+    It converts steps into miles.
+    """
+    km = convert_km(steps)
+    mi = round(km * 0.6213711922, 2)
+    return mi
+
+
+def battle_math(player: NPC, output: OutputBattle) -> None:
+    player = player.game_variables
+    if "battle_total" not in player:
+        player["battle_total"] = 0
+        player["battle_won"] = 0
+        player["battle_lost"] = 0
+        player["battle_draw"] = 0
+    player["battle_total"] += 1
+    if output.won:
+        player["battle_won"] += 1
+        player["percent_win"] = round(
+            (player["battle_won"] / player["battle_total"]) * 100
+        )
+    elif output.lost:
+        player["battle_lost"] += 1
+        player["percent_lose"] = round(
+            (player["battle_lost"] / player["battle_total"]) * 100
+        )
+    elif output.draw:
+        player["battle_draw"] += 1
+        player["percent_draw"] = round(
+            (player["battle_draw"] / player["battle_total"]) * 100
+        )
+
+
+def rematch(
+    player: NPC,
+    opponent: NPC,
+    monster: Monster,
+    date: int,
+) -> None:
+    today = dt.date.today().toordinal()
+    diff_date = today - date
+    low = player.game_variables["party_level_highest"]
+    high = 0
+    # nr days between match and rematch
+    if diff_date == 0:
+        high = low + 1
+    elif diff_date < 10:
+        high = low + 2
+    elif diff_date < 50:
+        high = low + 3
+    else:
+        high = low + 5
+    monster.level = random.randint(low, high)
+    # check if evolves
+    for evo in monster.evolutions:
+        if evo.path == "standard":
+            if evo.at_level <= monster.level:
+                opponent.evolve_monster(monster, evo.monster_slug)
+    # restore hp evolved monsters
+    for mon in opponent.monsters:
+        mon.current_hp = mon.hp

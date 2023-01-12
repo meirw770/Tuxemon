@@ -1,13 +1,13 @@
 {
   "slug": "spyder_scoop_weaver",
   "gender": "male",
-  "sprite_name": "rookie",
+  "sprite_name": "spyderrookie",
   "monsters": [
     {
       "name": "Cardiling",
       "level": 30,
       "slug": "cardiling",
-      "exp_give_mod": 3,
+      "money_mod": 10,
       "exp_req_mod": 27,
       "gender": "female"
     },
@@ -15,11 +15,11 @@
       "name": "Spighter",
       "level": 30,
       "slug": "spighter",
-      "exp_give_mod": 3,
+      "money_mod": 10,
       "exp_req_mod": 27,
       "gender": "male"
     }
   ],
   "combat_front": "spyder_rookie.png",
-  "combat_back": "red_back.png"
+  "combat_back": "adventurer_back.png"
 }

@@ -12,20 +12,21 @@
             "technique": "fire_ball"
         },
         {
-            "level_learned": 2,
+            "level_learned": 12,
             "technique": "fume"
         }
     ],
     "evolutions": [
         {
-            "path": "",
+            "path": "standard",
             "at_level": 24,
             "monster_slug": "agnidon"
         }
     ],
     "shape": "dragon",
+    "stage": "basic",
     "types": [
-        "Fire"
+        "fire"
     ],
     "possible_genders": ["male", "female"],
     "txmn_id": 13,

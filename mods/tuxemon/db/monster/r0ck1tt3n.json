@@ -12,15 +12,16 @@
             "technique": "boulder"
         },
         {
-            "level_learned": 2,
+            "level_learned": 12,
             "technique": "thunderball"
         }
     ],
     "evolutions": [],
     "shape": "hunter",
+    "stage": "standalone",
     "types": [
-        "Glitch",
-        "Earth"
+        "glitch",
+        "earth"
     ],
     "possible_genders": ["neuter"],
     "txmn_id": 0,

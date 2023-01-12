@@ -2,9 +2,8 @@
   "tech_id": 5,
   "accuracy": 1,
   "animation": "pound",
-  "category": "physical",
   "effects": [
-    "damage"
+    "damage 100"
   ],
   "flip_axes": "",
   "healing_power": 0,

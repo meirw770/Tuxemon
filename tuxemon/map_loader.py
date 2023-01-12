@@ -1,29 +1,5 @@
-#
-# Tuxemon
-# Copyright (C) 2014, William Edwards <shadowapex@gmail.com>,
-#                     Benjamin Bean <superman2k5@gmail.com>
-#
-# This file is part of Tuxemon.
-#
-# Tuxemon is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-#
-# Tuxemon is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with Tuxemon.  If not, see <http://www.gnu.org/licenses/>.
-#
-# Contributor(s):
-#
-# William Edwards <shadowapex@gmail.com>
-# Leif Theden <leif.theden@gmail.com>
-#
-
+# SPDX-License-Identifier: GPL-3.0
+# Copyright (c) 2014-2023 William Edwards <shadowapex@gmail.com>, Benjamin Bean <superman2k5@gmail.com>
 import logging
 from math import cos, pi, sin
 from typing import Any, Dict, Generator, Iterator, Mapping, Optional, Tuple
@@ -164,6 +140,10 @@ class TMXMapLoader:
 
     """
 
+    def __init__(self):
+        # Makes mocking easier during tests
+        self.image_loader = scaled_image_loader
+
     def load(self, filename: str) -> TuxemonMap:
         """Load map data from a tmx map file.
 
@@ -196,7 +176,7 @@ class TMXMapLoader:
         """
         data = pytmx.TiledMap(
             filename=filename,
-            image_loader=scaled_image_loader,
+            image_loader=self.image_loader,
             pixelalpha=True,
         )
         tile_size = (data.tilewidth, data.tileheight)
@@ -206,7 +186,7 @@ class TMXMapLoader:
         interacts = list()
         collision_map: Dict[Tuple[int, int], Optional[RegionProperties]] = {}
         collision_lines_map = set()
-        edges = data.properties.get("edges")
+        maps = data.properties
 
         # get all tiles which have properties and/or collisions
         gids_with_props = dict()
@@ -266,7 +246,7 @@ class TMXMapLoader:
             collision_map,
             collision_lines_map,
             data,
-            edges,
+            maps,
             filename,
         )
 

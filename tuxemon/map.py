@@ -1,33 +1,5 @@
-#
-# Tuxemon
-# Copyright (C) 2014, William Edwards <shadowapex@gmail.com>,
-#                     Benjamin Bean <superman2k5@gmail.com>
-#
-# This file is part of Tuxemon.
-#
-# Tuxemon is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-#
-# Tuxemon is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with Tuxemon.  If not, see <http://www.gnu.org/licenses/>.
-#
-# Contributor(s):
-#
-# William Edwards <shadowapex@gmail.com>
-# Leif Theden <leif.theden@gmail.com>
-#
-#
-# map Game map module.
-#
-#
-
+# SPDX-License-Identifier: GPL-3.0
+# Copyright (c) 2014-2023 William Edwards <shadowapex@gmail.com>, Benjamin Bean <superman2k5@gmail.com>
 from __future__ import annotations
 
 import logging
@@ -55,6 +27,7 @@ from tuxemon import prepare
 from tuxemon.compat import ReadOnlyRect
 from tuxemon.event import EventObject
 from tuxemon.graphics import scaled_image_loader
+from tuxemon.locale import T
 from tuxemon.math import Vector2, Vector3
 from tuxemon.tools import round_to_divisible
 
@@ -405,7 +378,7 @@ class TuxemonMap:
         collision_map: Mapping[Tuple[int, int], Optional[RegionProperties]],
         collisions_lines_map: Set[Tuple[Tuple[int, int], Direction]],
         tiled_map: TiledMap,
-        edges: str,
+        maps: dict,
         filename: str,
     ) -> None:
         """Constructor
@@ -429,7 +402,7 @@ class TuxemonMap:
             collision_map: Collision map.
             collisions_lines_map: Collision map of lines.
             tiled_map: Original tiled map.
-            edges: Behaviour at the edges.
+            maps: Dictionary of map properties.
             filename: Path of the map.
 
         """
@@ -440,10 +413,32 @@ class TuxemonMap:
         self.inits = inits
         self.events = events
         self.renderer: Optional[pyscroll.BufferedRenderer] = None
-        self.edges = edges
+        self.edges = maps.get("edges")
         self.data = tiled_map
         self.sprite_layer = 2
         self.filename = filename
+        self.maps = maps
+
+        # optional fields
+        self.slug = maps.get("slug")
+        self.name = T.translate(self.slug)
+        self.description = T.translate(f"{self.slug}_description")
+        # cardinal directions (towns + roads)
+        self.north = maps.get("north")
+        self.south = maps.get("south")
+        self.east = maps.get("east")
+        self.west = maps.get("west")
+        # translated cardinal directions (signs)
+        self.north_trans = T.translate(self.north)
+        self.south_trans = T.translate(self.south)
+        self.east_trans = T.translate(self.east)
+        self.west_trans = T.translate(self.west)
+        # inside (true), outside (none)
+        self.inside = bool(maps.get("inside"))
+        # scenario: spyder, xero or none
+        self.scenario = maps.get("scenario")
+        # check type of location
+        self.types = maps.get("types")
 
     def initialize_renderer(self) -> None:
         """
@@ -454,6 +449,7 @@ class TuxemonMap:
 
         """
         visual_data = pyscroll.data.TiledMapData(self.data)
+        # Behaviour at the edges.
         clamp = self.edges == "clamped"
         self.renderer = pyscroll.BufferedRenderer(
             visual_data,

@@ -12,15 +12,16 @@
             "technique": "blossom"
         },
         {
-            "level_learned": 2,
+            "level_learned": 12,
             "technique": "boulder"
         }
     ],
     "evolutions": [],
     "shape": "serpent",
+    "stage": "standalone",
     "types": [
-        "Glitch",
-        "Wood"
+        "glitch",
+        "wood"
     ],
     "possible_genders": ["neuter"],
     "txmn_id": 0,

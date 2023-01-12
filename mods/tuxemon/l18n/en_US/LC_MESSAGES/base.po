@@ -15,68 +15,248 @@ msgstr ""
 "X-Generator: Weblate 4.3.2\n"
 
 ## ITEM TRANSLATIONS ##
-# Apple
 msgid "apple"
 msgstr "Apple"
 
 msgid "apple_description"
 msgstr "Heals a monster by 10 HP."
 
-# Berry
 msgid "berry"
 msgstr "Berry"
 
 msgid "berry_description"
 msgstr "Heals a monster by 10 HP."
 
-# Cherry
 msgid "cherry"
 msgstr "Cherry"
 
 msgid "cherry_description"
 msgstr "Heals a monster by 10 HP."
 
-# Orange
 msgid "orange"
 msgstr "Orange"
 
 msgid "orange_description"
 msgstr "Heals a monster by 20 HP."
 
-# Potion
 msgid "potion"
 msgstr "Potion"
 
 msgid "potion_description"
 msgstr "Heals a monster by 50 HP."
 
-# Super Potion
 msgid "super_potion"
 msgstr "Super Potion"
 
 msgid "super_potion_description"
 msgstr "Heals a monster by 150 HP."
 
-# Imperial Potion
 msgid "imperial_potion"
 msgstr "Imperial Potion"
 
 msgid "imperial_potion_description"
 msgstr "Heals a monster by 350 HP."
 
-# Revive
 msgid "revive"
 msgstr "Revive"
 
 msgid "revive_description"
 msgstr "Revives knocked out Tuxemon and restores 20 HP."
 
-# Capture Device
 msgid "capture_device"
 msgstr "Capture Device"
 
 msgid "capture_device_description"
 msgstr "Captures a monster."
+
+msgid "fishing_rod"
+msgstr "Fishing Rod"
+
+msgid "fishing_rod_description"
+msgstr "Catch fish."
+
+msgid "earthmover_key"
+msgstr "Earthmover Key"
+
+msgid "earthmover_key_description"
+msgstr "Could come in handy if there's a giant earthmover blocking the path."
+
+msgid "sledgehammer"
+msgstr "Sledgehammer"
+
+msgid "sledgehammer_description"
+msgstr "Smash apart grey boulders."
+
+msgid "shammer_fossil"
+msgstr "Shammer Fossil"
+
+msgid "shammer_fossil_description"
+msgstr ""
+
+msgid "rhincus_fossil"
+msgstr "Rhincus Fossil"
+
+msgid "rhincus_fossil_description"
+msgstr ""
+
+# Boosters (items)
+msgid "greenwash_badge"
+msgstr "Badge: Greenwash"
+
+msgid "greenwash_badge_description"
+msgstr "Tuxemon purchased from Greenwash require this badge to morph."
+
+msgid "nimrod_badge"
+msgstr "Badge: Nimrod"
+
+msgid "nimrod_badge_description"
+msgstr "Tuxemon purchased from Nimrod require this badge to morph."
+
+msgid "omnichannel_badge"
+msgstr "Badge: Omnichannel"
+
+msgid "omnichannel_badge_description"
+msgstr "Tuxemon purchased from Omnichannel require this badge to morph."
+
+msgid "scoop_badge"
+msgstr "Badge: Scoop"
+
+msgid "scoop_badge_description"
+msgstr "Tuxemon purchased from Scoop require this badge to morph."
+
+msgid "shaft_badge"
+msgstr "Badge: Shaft"
+
+msgid "shaft_badge_description"
+msgstr "Tuxemon purchased from Shaft require this badge to morph."
+
+msgid "booster_tech"
+msgstr "Tech Booster"
+
+msgid "booster_tech_description"
+msgstr "An open source technology that allows to morph tuxemon into a different form."
+
+msgid "earth_booster"
+msgstr "Earth Booster"
+
+msgid "earth_booster_description"
+msgstr "It allows to morph an Earth type tuxemon into a different form."
+
+msgid "fire_booster"
+msgstr "Fire Booster"
+
+msgid "fire_booster_description"
+msgstr "It allows to morph a Fire type tuxemon into a different form."
+
+msgid "flintstone"
+msgstr "Flintstone"
+
+msgid "flintstone_description"
+msgstr ""
+
+msgid "lucky_bamboo"
+msgstr "Lucky Bamboo"
+
+msgid "lucky_bamboo_description"
+msgstr ""
+
+msgid "metal_booster"
+msgstr "Metal Booster"
+
+msgid "metal_booster_description"
+msgstr "It allows to morph a Metal type tuxemon into a different form."
+
+msgid "miaow_milk"
+msgstr "Miaow Milk"
+
+msgid "miaow_milk_description"
+msgstr "Cats love the taste of Miaow Milk™!"
+
+msgid "peace_lily"
+msgstr "Peace Lily"
+
+msgid "peace_lily_description"
+msgstr ""
+
+msgid "petrified_dung"
+msgstr "Petrified Dung"
+
+msgid "petrified_dung_description"
+msgstr ""
+
+msgid "pyramidion"
+msgstr "Pyramidion"
+
+msgid "pyramidion_description"
+msgstr ""
+
+msgid "sea_girdle"
+msgstr "Sea Girdle"
+
+msgid "sea_girdle_description"
+msgstr ""
+
+msgid "stovepipe"
+msgstr "Stovepipe"
+
+msgid "stovepipe_description"
+msgstr ""
+
+msgid "sweet_sand"
+msgstr "Sweet Sand"
+
+msgid "sweet_sand_description"
+msgstr ""
+
+msgid "tectonic_drill"
+msgstr "Tectonic Drill"
+
+msgid "tectonic_drill_description"
+msgstr ""
+
+msgid "thunderstone"
+msgstr "Thunderstone"
+
+msgid "thunderstone_description"
+msgstr ""
+
+msgid "water_booster"
+msgstr "Water Booster"
+
+msgid "water_booster_description"
+msgstr "It allows to morph a Water type tuxemon into a different form."
+
+msgid "wood_booster"
+msgstr "Wood Booster"
+
+msgid "wood_booster_description"
+msgstr "It allows to morph a Wood type tuxemon into a different form."
+
+# Map Types:
+
+msgid "no_type"
+msgstr "no type"
+
+msgid "town"
+msgstr "town"
+
+msgid "route"
+msgstr "route"
+
+msgid "dungeon"
+msgstr "dungeon"
+
+msgid "center"
+msgstr "center"
+
+msgid "shop"
+msgstr "shop"
+
+msgid "inside"
+msgstr "inside"
+
+msgid "outside"
+msgstr "outside"
 
 # TMs
 msgid "tm_avalanche"
@@ -93,6 +273,12 @@ msgstr "Technique Manual that teaches a Wood Tuxemon the Blossom technique."
 
 msgid "item_cannot_use_here"
 msgstr "{name} cannot be used here!"
+
+msgid "item_used_wrong_location_inside"
+msgstr "{name} can only be used {here}!"
+
+msgid "item_used_wrong_location_type"
+msgstr "{name} can only be used in a {here}!"
 
 msgid "item_no_available_target"
 msgstr "{name} cannot be used on any of your Tuxemon right now."
@@ -119,17 +305,29 @@ msgstr "${{name}}'s wallet: ${{currency}}${{money}}"
 
 ## NOTIFICATION TRANSLATIONS ##
 # Combat notifications
-msgid "combat_run"
-msgstr "{user} ran away!"
-
 msgid "combat_miss"
 msgstr "It missed..."
 
+msgid "combat_forfeit"
+msgstr "You have forfeited!\n{npc} is disappointed."
+
 msgid "combat_can't_run_from_trainer"
-msgstr "Can't run from trainer battles!"
+msgstr "Can't run!"
 
 msgid "combat_player_run"
 msgstr "You have run away!"
+
+msgid "combat_player_run_status"
+msgstr "Can't escape.\n{monster} is {status}!"
+
+msgid "combat_player_forfeit_status"
+msgstr "Can't forfeit the match.\n{monster} is {status}!"
+
+msgid "combat_player_swap_status"
+msgstr "Can't switch monsters.\n{monster} is {status}!"
+
+msgid "cannot_use_tech_monster"
+msgstr "{name} can't be used."
 
 msgid "combat_used_x"
 msgstr "{user} used {name}!"
@@ -140,21 +338,11 @@ msgstr "{user} used {name} on {target}!"
 msgid "combat_swap"
 msgstr "{user} sent out {target}!"
 
+msgid "combat_skip"
+msgstr "{user} skips the turn!"
+
 msgid "combat_call_tuxemon"
 msgstr "Go {name}!"
-
-# TODO: similar to combat_swap - refactor!
-msgid "combat_opponent_call_tuxemon"
-msgstr "{user} sent out {name}!"
-
-msgid "combat_state_poison_get"
-msgstr "{target} is poisoned."
-
-msgid "combat_state_poison_damage"
-msgstr "{name} took poison damage!"
-
-msgid "combat_state_lifeleech_get"
-msgstr "{user} is leeching health from {target}."
 
 msgid "dodge_increased"
 msgstr "{user}'s {stat} increased."
@@ -164,9 +352,6 @@ msgstr "{user}'s speed was halved."
 
 msgid "hp_restored"
 msgstr "{user}'s hp was restored."
-
-msgid "combat_state_overfeed_get"
-msgstr "{user} Overfed {target}."
 
 msgid "dodge_fell"
 msgstr "{user}'s dodge fell."
@@ -180,21 +365,6 @@ msgstr "{user} rose higher into the air."
 msgid "combat_amnesia_get"
 msgstr "{user} has gotten amnesia."
 
-msgid "combat_state_lifeleech_success"
-msgstr "{user} lost health to lifeleech!"
-
-msgid "combat_state_lifeleech_failure"
-msgstr "{link} can't heal any further."
-
-msgid "combat_state_recover_get"
-msgstr "{target} started to recover health."
-
-msgid "combat_state_recover_success"
-msgstr "{user} recovered health!"
-
-msgid "combat_state_recover_failure"
-msgstr "{user} can't heal any further."
-
 msgid "combat_status_damage"
 msgstr "{name} took {status} damage!"
 
@@ -203,6 +373,9 @@ msgstr "{name} wants to battle!"
 
 msgid "combat_victory"
 msgstr "You have won!"
+
+msgid "combat_victory_trainer"
+msgstr "You have won against {npc}!\n You get {currency}{prize}!"
 
 msgid "combat_defeat"
 msgstr "You've been defeated!"
@@ -252,6 +425,88 @@ msgstr "The attack was resisted!"
 msgid "attack_weak"
 msgstr "The attack was strongly resisted!"
 
+## COMBAT STATE STATUSES
+msgid "combat_state_blinded_get"
+msgstr "{target} is blinded."
+
+msgid "combat_state_chargedup_get"
+msgstr "{target} is fully charged."
+
+msgid "combat_state_charging_get"
+msgstr "{target} is charging power."
+
+msgid "combat_state_confused_get"
+msgstr "{target} is confused."
+
+msgid "combat_state_diehard_get"
+msgstr "{target} will keep fighting."
+
+msgid "combat_state_dozing_get"
+msgstr "{target} is asleep."
+
+msgid "combat_state_enraged_get"
+msgstr "{target} is enraged."
+
+msgid "combat_state_exhausted_get"
+msgstr "{target} is exhausted."
+
+msgid "combat_state_festering_get"
+msgstr "{target}'s wounds fester."
+
+msgid "combat_state_focused_get"
+msgstr "{target} becomes focused."
+
+msgid "combat_state_grabbed_get"
+msgstr "{target} is held tight."
+
+msgid "combat_state_hardshell_get"
+msgstr "{target} is covered in hard shell."
+
+msgid "combat_state_lifeleech_failure"
+msgstr "{link} can't heal any further."
+
+msgid "combat_state_lifeleech_get"
+msgstr "{target}'s lifeforce is being leeched."
+
+msgid "combat_state_lifeleech_success"
+msgstr "{user} lost health to lifeleech!"
+
+msgid "combat_state_noddingoff_get"
+msgstr "{target} is nodding off to sleep."
+
+msgid "combat_state_overfeed_get"
+msgstr "{user} Overfed {target}."
+
+msgid "combat_state_poison_damage"
+msgstr "{name} took poison damage!"
+
+msgid "combat_state_poison_get"
+msgstr "{target} is poisoned."
+
+msgid "combat_state_recover_failure"
+msgstr "{user} can't heal any further."
+
+msgid "combat_state_recover_get"
+msgstr "{target} started to recover health."
+
+msgid "combat_state_recover_success"
+msgstr "{user} recovered health!"
+
+msgid "combat_state_sniping_get"
+msgstr "{target} takes aim."
+
+msgid "combat_state_softened_get"
+msgstr "{target}'s armour softens."
+
+msgid "combat_state_spyderbite_get"
+msgstr "{target} begins to sniffle."
+
+msgid "combat_state_stuck_get"
+msgstr "{target} is stuck in place."
+
+msgid "combat_state_tired_get"
+msgstr "{target} is worn out."
+
 # Generic notifications
 msgid "empty_slot"
 msgstr "Empty Slot"
@@ -264,13 +519,6 @@ msgstr "Use"
 
 msgid "item_confirm_cancel"
 msgstr "Cancel"
-
-# TODO same as generic_success and generic_failure - refactor!
-msgid "item_success"
-msgstr "It worked!"
-
-msgid "item_failure"
-msgstr "It failed!"
 
 msgid "generic_success"
 msgstr "It worked!"
@@ -286,6 +534,9 @@ msgstr "Gotcha!"
 
 msgid "not_implemented"
 msgstr "This feature is not yet implemented."
+
+msgid "alert_text"
+msgstr "Text too long!"
 
 msgid "receive_happiness"
 msgstr "Received 5 Capture Devices!"
@@ -308,20 +559,78 @@ msgstr "No, keep this save."
 msgid "slot"
 msgstr "Slot"
 
+## STATUSES
+msgid "status_blinded"
+msgstr "Blinded"
+
+msgid "status_chargedup"
+msgstr "Charged Up"
+
+msgid "status_charging"
+msgstr "Charging"
+
+msgid "status_confused"
+msgstr "Confused"
+
+msgid "status_diehard"
+msgstr "Die Hard"
+
+msgid "status_dozing"
+msgstr "Dozing"
+
+msgid "status_eliminated"
+msgstr "Eliminated"
+
+msgid "status_enraged"
+msgstr "Berserk"
+
+msgid "status_exhausted"
+msgstr "Exhausted"
+
 msgid "status_faint"
 msgstr "Faint"
 
-msgid "status_poison"
-msgstr "Poison"
+msgid "status_festering"
+msgstr "Festering"
+
+msgid "status_focused"
+msgstr "Focused"
+
+msgid "status_grabbed"
+msgstr "Grabbed"
+
+msgid "status_hardshell"
+msgstr "Hard Shell"
 
 msgid "status_lifeleech"
 msgstr "Lifeleech"
 
+msgid "status_noddingoff"
+msgstr "Nodding Off"
+
 msgid "status_overfeed"
 msgstr "Overfeed"
 
+msgid "status_poison"
+msgstr "Poison"
+
 msgid "status_recover"
 msgstr "Recover"
+
+msgid "status_sniping"
+msgstr "Sniping"
+
+msgid "status_softened"
+msgstr "Softened"
+
+msgid "status_spyderbite"
+msgstr "Spyder Bite"
+
+msgid "status_stuck"
+msgstr "Stuck"
+
+msgid "status_tired"
+msgstr "Tired"
 
 ## TECHNIQUE TRANSLATIONS ##
 msgid "all_in"
@@ -594,6 +903,378 @@ msgstr "Whirlwind"
 msgid "wing_tip"
 msgstr "Wing Tip"
 
+msgid "acid"
+msgstr "Acid"
+
+msgid "adamantine"
+msgstr "Adamantine"
+
+msgid "air_chain"
+msgstr "Air Chain"
+
+msgid "ants"
+msgstr "Ants"
+
+msgid "arcane_eye"
+msgstr "Arcane Eye"
+
+msgid "assault"
+msgstr "Assault"
+
+msgid "barking"
+msgstr "Barking"
+
+msgid "blood_nets"
+msgstr "Blood Nets"
+
+msgid "breath"
+msgstr "Breath"
+
+msgid "canine"
+msgstr "Canine"
+
+msgid "cat_calling"
+msgstr "Cat Calling"
+
+msgid "cavity"
+msgstr "Cavity"
+
+msgid "chameleon"
+msgstr "Chameleon"
+
+msgid "clairaudience"
+msgstr "Clairaudience"
+
+msgid "clock"
+msgstr "Clock"
+
+msgid "cloud_aether"
+msgstr "Cloud Aether"
+
+msgid "conjurer"
+msgstr "Conjurer"
+
+msgid "crystal"
+msgstr "Crystal"
+
+msgid "demiurge"
+msgstr "Demiurge"
+
+msgid "earthquake"
+msgstr "Earthquake"
+
+msgid "evasion"
+msgstr "Evasion"
+
+msgid "feline"
+msgstr "Feline"
+
+msgid "fiery"
+msgstr "Fiery"
+
+msgid "fire_shield"
+msgstr "Fire Shield"
+
+msgid "firestorm"
+msgstr "Firestorm"
+
+msgid "fledgling"
+msgstr "Fledgling"
+
+msgid "gold_digger"
+msgstr "Gold Digger"
+
+msgid "grinding"
+msgstr "Grinding"
+
+msgid "gust"
+msgstr "Gust"
+
+msgid "gyser"
+msgstr "Gyser"
+
+msgid "hawk"
+msgstr "Hawk"
+
+msgid "ice_storm"
+msgstr "Ice Storm"
+
+msgid "insanity"
+msgstr "Insanity"
+
+msgid "kraken"
+msgstr "Kraken"
+
+msgid "lantern"
+msgstr "Lantern"
+
+msgid "lava"
+msgstr "Lava"
+
+msgid "lightning_spheres"
+msgstr "Lightning Spheres"
+
+msgid "lineage"
+msgstr "Lineage"
+
+msgid "lust"
+msgstr "Lust"
+
+msgid "magma"
+msgstr "Magma"
+
+msgid "maori"
+msgstr "Maori"
+
+msgid "meltdown"
+msgstr "Meltdown"
+
+msgid "mending"
+msgstr "Mending"
+
+msgid "mobbing"
+msgstr "Mobbing"
+
+msgid "muck"
+msgstr "Muck"
+
+msgid "mystic_blending"
+msgstr "Mystic Blending"
+
+msgid "negation"
+msgstr "Negation"
+
+msgid "nest"
+msgstr "Nest"
+
+msgid "oedipus"
+msgstr "Oedipus"
+
+msgid "orbs"
+msgstr "Orbs"
+
+msgid "phantasmal_force"
+msgstr "Phantasmal Force"
+
+msgid "pit"
+msgstr "Pit"
+
+msgid "platinum"
+msgstr "Platinum"
+
+msgid "poison_courtship"
+msgstr "Poison Courtship"
+
+msgid "radiance"
+msgstr "Radiance"
+
+msgid "ring"
+msgstr "Ring"
+
+msgid "ruby"
+msgstr "Ruby"
+
+msgid "saber"
+msgstr "Saber"
+
+msgid "shapechange"
+msgstr "Shapechange"
+
+msgid "slime"
+msgstr "Slime"
+
+msgid "stabilo"
+msgstr "Stabilo"
+
+msgid "stonehenge"
+msgstr "Stonehenge"
+
+msgid "strangulation"
+msgstr "Strangulation"
+
+msgid "sunburst"
+msgstr "Sunburst"
+
+msgid "sword"
+msgstr "Sword"
+
+msgid "sylvan"
+msgstr "Sylvan"
+
+msgid "terror"
+msgstr "Terror"
+
+msgid "time_crisis"
+msgstr "Time Crisis"
+
+msgid "tip"
+msgstr "Tip"
+
+msgid "torch"
+msgstr "Torch"
+
+msgid "touch"
+msgstr "Touch"
+
+msgid "tsunami"
+msgstr "Tsunami"
+
+msgid "tux"
+msgstr "Tux"
+
+msgid "ubuntu"
+msgstr "Ubuntu"
+
+msgid "undertaker"
+msgstr "Undertaker"
+
+msgid "venom"
+msgstr "Venom"
+
+msgid "viper"
+msgstr "Viper"
+
+msgid "vorpal"
+msgstr "Vorpal"
+
+msgid "wall_fire"
+msgstr "Wall Fire"
+
+msgid "wall_ice"
+msgstr "Wall Ice"
+
+msgid "walls"
+msgstr "Walls"
+
+msgid "webs_wind"
+msgstr "Webs Wind"
+
+## MAP ##
+
+msgid "candy_town"
+msgstr "Candy"
+
+msgid "citypark"
+msgstr "Citypark"
+
+msgid "cotton_town"
+msgstr "Cotton"
+
+msgid "dryadsgrove"
+msgstr "Dryad's Grove"
+
+msgid "flower_city"
+msgstr "Flower"
+
+msgid "leather_town"
+msgstr "Leather"
+
+msgid "paper_town"
+msgstr "Paper"
+
+msgid "route1"
+msgstr "Route 1"
+
+msgid "route1_sanglorian"
+msgstr "Sanglorian Avenue"
+
+msgid "route2"
+msgstr "Route 2"
+
+msgid "route3"
+msgstr "Route 3"
+
+msgid "route4"
+msgstr "Route 4"
+
+msgid "route5"
+msgstr "Route 5"
+
+msgid "route6"
+msgstr "Route 6"
+
+msgid "routea"
+msgstr "Route A"
+
+msgid "routec"
+msgstr "Route C"
+
+msgid "routed"
+msgstr "Route D"
+
+msgid "routee"
+msgstr "Route E"
+
+msgid "taba_town"
+msgstr "Taba"
+
+msgid "timber_town"
+msgstr "Timber"
+
+msgid "tunnel"
+msgstr "Tunnel"
+
+## MAP DESCRIPTIONS TOWN / CITY ##
+
+msgid "candy_town_description"
+msgstr "Candy Town Slogan"
+
+msgid "citypark_description"
+msgstr "A Taste of the Wild!"
+
+msgid "cotton_town_description"
+msgstr "A growing force!"
+
+msgid "flower_city_description"
+msgstr "Uniforms that guard you while you sleep!"
+
+msgid "leather_town_description"
+msgstr "Proof that beauty and mining can co-exist!"
+
+msgid "paper_town_description"
+msgstr "The gateway to Fondent!"
+
+msgid "route1_description"
+msgstr "Take care!"
+
+msgid "route2_description"
+msgstr "The historic path!"
+
+msgid "route5_description"
+msgstr "The memorial passage to Timber Town!"
+
+msgid "taba_town_description"
+msgstr "A peaceful refuge!"
+
+msgid "timber_town_description"
+msgstr "Breadbasket of Fondant!"
+
+## MAP SIGNS ##
+
+msgid "welcome_location_city"
+msgstr "Welcome to ${{map_name}} City: ${{map_desc}}\n"
+"North: ${{north}} / South: ${{south}} / West: ${{west}} / East: ${{east}}"
+
+msgid "welcome_location_route"
+msgstr "Welcome to ${{map_name}}: ${{map_desc}}\n"
+"North: ${{north}} / South: ${{south}} / West: ${{west}} / East: ${{east}}"
+
+msgid "welcome_location_town"
+msgstr "Welcome to ${{map_name}} Town: ${{map_desc}}\n"
+"North: ${{north}} / South: ${{south}} / West: ${{west}} / East: ${{east}}"
+
+msgid "here_to_north"
+msgstr "From ${{map_name}} to ${{north}}"
+
+msgid "here_to_south"
+msgstr "From ${{map_name}} to ${{south}}"
+
+msgid "here_to_west"
+msgstr "From ${{map_name}} to ${{west}}"
+
+msgid "here_to_east"
+msgstr "From ${{map_name}} to ${{east}}"
+
 ## MENU TRANSLATIONS ##
 
 msgid "menu_alphabet"
@@ -625,6 +1306,17 @@ msgstr "Are you sure you would like to release {name}?"
 msgid "tuxemon_released"
 msgstr "{name} has been released."
 
+msgid "evolution_confirmation"
+msgstr "{name} is trying to evolve into {evolve}. Allow evolution?"
+
+msgid "tuxemon_stat1"
+msgstr "ID {txmn}, {type}, {doc} days ago\n"
+"{exp}xp, {exp_lv}xp to Lv {lv}\n"
+"Body: {weight} {unit_weight} {height} {unit_height}"
+
+msgid "tuxemon_stat2"
+msgstr "{desc}"
+
 # Menu notifications
 msgid "log_off"
 msgstr "Log Off"
@@ -650,15 +1342,11 @@ msgstr "Load"
 msgid "menu_monster"
 msgstr "Tuxemon"
 
-# TODO: duplicate of menu_monster?
-msgid "menu_monsters"
-msgstr "Monsters"
-
 msgid "menu_storage"
-msgstr "Pick Up Monster"
+msgstr "Pick Up Tuxemon"
 
 msgid "menu_dropoff"
-msgstr "Drop Off Monster"
+msgstr "Drop Off Tuxemon"
 
 msgid "menu_multiplayer"
 msgstr "Multiplayer"
@@ -674,6 +1362,9 @@ msgstr "Player"
 
 msgid "menu_run"
 msgstr "Run"
+
+msgid "menu_forfeit"
+msgstr "Forfeit"
 
 msgid "menu_save"
 msgstr "Save"
@@ -758,6 +1449,9 @@ msgstr "Hostname or IP?"
 msgid "swap"
 msgstr "Swap"
 
+msgid "skip"
+msgstr "Skip"
+
 ## MONSTER TRANSLATIONS ##
 # Monster details
 
@@ -798,10 +1492,10 @@ msgid "agnite"
 msgstr "Agnite"
 
 msgid "allagon_description"
-msgstr "Allagon are drawn to relics made from the metals left behind by their ancestors, and will be violent to retrieve them."
+msgstr "ALLAGON are drawn to relics made from the metals left behind by their ancestors, and will be violent to retrieve them."
 
 msgid "allagon"
-msgstr "Allagaon"
+msgstr "Allagon"
 
 msgid "altie_description"
 msgstr "ALTIE floated down to earth in a bubble. Now its bubble has popped, it cannot float more than a few metres in the air."
@@ -882,7 +1576,7 @@ msgid "baobaraffe"
 msgstr "Baobaraffe"
 
 msgid "baoby_description"
-msgstr "They travel from river to river in search of water to drink and store. The leafy ossicones on its head conceal movable points that act similar to a dowsing rod. Many creatures follow Baoby in droughts."
+msgstr "They travel from river to river in search of water to drink and store. The leafy ossicones on its head conceal movable points that act similar to a dowsing rod. Many creatures follow BAOBY in droughts."
 
 msgid "baoby"
 msgstr "Baoby"
@@ -912,7 +1606,7 @@ msgid "bolt"
 msgstr "Bolt"
 
 msgid "boltnu_description"
-msgstr "It spends most of its time digging burrows into the grounnd, it remains dizzy from the constant vibrations and movement caused by them digging into the soil."
+msgstr "It spends most of its time digging burrows into the ground, it remains dizzy from the constant vibrations and movement caused by them digging into the soil."
 
 msgid "boltnu"
 msgstr "Boltnu"
@@ -948,7 +1642,7 @@ msgid "bugnin"
 msgstr "Bugnin"
 
 msgid "bumbulus_description"
-msgstr "Bumbulus is a flying being that produces a cloud of smoke to disguise itself as a cloud. No one has ever seen its true body."
+msgstr "BUMBULUS is a flying being that produces a cloud of smoke to disguise itself as a cloud. No one has ever seen its true body."
 
 msgid "bumbulus"
 msgstr "Bumbulus"
@@ -1194,7 +1888,7 @@ msgid "exapode"
 msgstr "Exapode"
 
 msgid "exclawvate_description"
-msgstr "Often seen on construction sites, they can use their huge hands and tail to scoop up dirt and rubble. Underneath the tuxemon are caterpillar tyres, giving them a beter balance and grip while climbing heaps of rubble."
+msgstr "Often seen on construction sites, they can use their huge hands and tail to scoop up dirt and rubble. Underneath the Tuxemon are caterpillar tires, giving them a better balance and grip while climbing heaps of rubble."
 
 msgid "exclawvate"
 msgstr "Exclawvate"
@@ -1218,7 +1912,7 @@ msgid "fancair"
 msgstr "Fancair"
 
 msgid "ferricran_description"
-msgstr "Once, the Ferricran were covered all over with adamantine scales, and had wings of mithril."
+msgstr "Once, the FERRICRAN were covered all over with adamantine scales, and had wings of mithril."
 
 msgid "ferricran"
 msgstr "Ferricran"
@@ -1242,7 +1936,7 @@ msgid "flambear"
 msgstr "Flambear"
 
 msgid "fluoresfin_description"
-msgstr "When threatened, it huddles together with other Fluoresfin to create a large blinding light to disorientate predators."
+msgstr "When threatened, it huddles together with other FLUORESFIN to create a large blinding light to disorientate predators."
 
 msgid "fluoresfin"
 msgstr "Fluoresfin"
@@ -1398,7 +2092,7 @@ msgid "incandesfin"
 msgstr "Incandesfin"
 
 msgid "jelillow_description"
-msgstr "When a person rests their head on Jelillow, its jelly-like skin causes them to fall into a deep sleep. If someone is having sleeping problems, then this monster will be used to help them."
+msgstr "When a person rests their head on JELILLOW, its jelly-like skin causes them to fall into a deep sleep. If someone is having sleeping problems, then this monster will be used to help them."
 
 msgid "jelillow"
 msgstr "Jelillow"
@@ -1512,7 +2206,7 @@ msgid "metesaur"
 msgstr "Metesaur"
 
 msgid "metesaur_description"
-msgstr "This tuxemon would enjoy diving into the ground and leaving marks. Sometimes, the tuxemon would misjudge the hit and land in trees, starting huge and dangerous forest fires"
+msgstr "This Tuxemon would enjoy diving into the ground and leaving marks. Sometimes, the Tuxemon would misjudge the hit and land in trees, starting huge and dangerous forest fires"
 
 msgid "miaownolith"
 msgstr "Miaownolith"
@@ -1614,7 +2308,7 @@ msgid "ouroboutlet"
 msgstr "Ouroboutlet"
 
 msgid "pairagrim_description"
-msgstr "One of Pairagrim's heads is always searching for prey, while the other focuses on flying at great speed."
+msgstr "One of PAIRAGRIM's heads is always searching for prey, while the other focuses on flying at great speed."
 
 msgid "pairagrim"
 msgstr "Pairagrim"
@@ -1650,7 +2344,7 @@ msgid "pigabyte"
 msgstr "Pigabyte"
 
 msgid "pilthropus_description"
-msgstr "Found alongside Tuxemon such as Rhincus, Pilthropus was one of the oldest Tuxemon able to create its own tools."
+msgstr "Found alongside Tuxemon such as RHINCUS, PILTHROPUS was one of the oldest Tuxemon able to create its own tools."
 
 msgid "pilthropus"
 msgstr "Pilthropus"
@@ -1716,7 +2410,7 @@ msgid "pythwire"
 msgstr "Pythwire"
 
 msgid "qetzlrokilus_description"
-msgstr "This tuxemon would dive into groups of other dinosaur tuxemon and burn them. They also enjoy setting forests alight and dropping their ashes into water to spoil its purity."
+msgstr "This Tuxemon would dive into groups of other dinosaur Tuxemon and burn them. They also enjoy setting forests alight and dropping their ashes into water to spoil its purity."
 
 msgid "qetzlrokilus"
 msgstr "Qetzlrokilus"
@@ -1746,13 +2440,13 @@ msgid "rockitten"
 msgstr "Rockitten"
 
 msgid "rosarin_description"
-msgstr "Rosarin's love is incredible, he's only asking some affection."
+msgstr "ROSARIN's love is incredible, he's only asking some affection."
 
 msgid "rosarin"
 msgstr "Rosarin"
 
 msgid "ruption_description"
-msgstr "Once Embra's flame becomes hot enough, it engulfs its entire body, essentially replacing it in the process."
+msgstr "Once EMBRA's flame becomes hot enough, it engulfs its entire body, essentially replacing it in the process."
 
 msgid "ruption"
 msgstr "Ruption"
@@ -1890,7 +2584,7 @@ msgid "snowrilla"
 msgstr "Snowrilla"
 
 msgid "sockeserp_description"
-msgstr "An otherwise formiddable enemy, SOCKESERP is easily dispatched if it gets tangled up."
+msgstr "An otherwise formidable enemy, SOCKESERP is easily dispatched if it gets tangled up."
 
 msgid "sockeserp"
 msgstr "Sockeserp"
@@ -1956,16 +2650,10 @@ msgid "taupypus"
 msgstr "Taupypus"
 
 msgid "teddisun_description"
-msgstr "Teddisun worships the sun - they're always seen carrying their sun toy."
+msgstr "TEDDISUN worships the sun - they're always seen carrying their sun toy."
 
 msgid "teddisun"
 msgstr "Teddisun"
-
-msgid "template_description"
-msgstr "Some description here"
-
-msgid "template"
-msgstr "Template Name"
 
 msgid "tetrchimp_description"
 msgstr "They absorb any information they come across. Their constant chatter communicates everything they have learned in order."
@@ -2324,9 +3012,6 @@ msgstr "Aeble"
 msgid "allie"
 msgstr "Allie"
 
-msgid "cottonnurse"
-msgstr "Cotton Nurse"
-
 msgid "karrianna"
 msgstr "Karrianna"
 
@@ -2407,9 +3092,6 @@ msgstr "Team Xero Grunt X"
 
 ## DIALOG TRANSLATIONS ##
 # general dialogs
-msgid "healmytuxemon"
-msgstr "Do you want to heal your Tuxemon?"
-
 msgid "haveagoodday"
 msgstr "Have a good day!"
 
@@ -2445,9 +3127,6 @@ msgstr "It's a fountain. A lot of coins are at the bottom."
 
 msgid "tree"
 msgstr "This tree looks happy and healthy!"
-
-msgid "route_2"
-msgstr "Route 2"
 
 msgid "sure_i_do"
 msgstr "Sure I do."
@@ -2577,19 +3256,11 @@ msgstr "Cathedral Center: We Live to Serve."
 msgid "Cotton_Mart"
 msgstr "Get the scoop at the Scoop Store!"
 
-msgid "Cotton_Town_Sign\n"
-msgstr "Welcome to Cotton Town: A Growing Force\n" 
-"↑ Cotton Town --- Route 1 ↓\n"
-
 msgid "column1"
 msgstr "A rare and ancient column. This used to be part of a temple."
 
 msgid "column2"
 msgstr "A rare and ancient column. Other ruins from the same culture can be found on Route 3. "
-
-msgid "cityparksign\n"
-msgstr "Welcome to City Park: A Taste of the Wild\n"
-"↑ City Park --- Route 2 ↓\n"
 
 msgid "route2speech"
 msgstr "EEK!!!"
@@ -2607,7 +3278,7 @@ msgid "yestalk"
 msgstr "Really? Thanks..."
 
 msgid "notalk"
-msgstr "How insensitive of you! Too bad, you’ll have to listen to me anyway!"
+msgstr "How insensitive of you! Too bad, you'll have to listen to me anyway!"
 
 msgid "spillit\n"
 msgstr "You know that I am the leader of the Xero institute and that I recruited you to fight them. But you don't know something else.\n"
@@ -2617,7 +3288,7 @@ msgid "spillit3"
 msgstr "Whatever... Allie is my sister and means the world to me, so it destroyed me when I found out he had taken her to HQ."
 
 msgid "spillit4"
-msgstr "It may not seem like a bad thing, but it is. Do you know what they do to their recuits? DO YOU!?"
+msgstr "It may not seem like a bad thing, but it is. Do you know what they do to their recruits? DO YOU!?"
 
 msgid "spillit5"
 msgstr "Because neither do I... All I know is that no one has ever left Omnichannel after being recruited."
@@ -2862,7 +3533,7 @@ msgid "ohnoes"
 msgstr "Well... I don't know how to feel about this..."
 
 msgid "ohnoes2"
-msgstr "Now that that’s over...we still need potions from the Tuxemart.\n"
+msgstr "Now that that's over...we still need potions from the Tuxemart.\n"
 "Make sure you're back before curfew though!"
 
 msgid "depressedmom"
@@ -3432,11 +4103,8 @@ msgstr "The grave says:\n"
 "Here lies Jimmy. A friend, a knight, and ... bad person overall. However, ... never ... ... Help! ...\n"
 "The rest is weathered away."
 
-msgid "cottonnurse_dialog"
-msgstr "Welcome to the Cotton Town Tuxecenter!"
-
 msgid "tabanurse_dialog\n"
-msgstr "Welcome to the Taba Town Tuxecenter!\n"
+msgstr "Welcome to the ${{map_name}} Tuxecenter!\n"
 "Do you want to heal your Tuxemon?\n"
 
 msgid "okaythen"
@@ -3783,6 +4451,8 @@ msgstr "Did you know that the first spectacles were made of beryl, not glass? \n
 
 msgid "spyder_leather_maniac" 
 msgstr "How is your adventure so far? \n ... \n Wow, so talkative! You are really coming out of your shell." 
+msgid "spyder_route3_sign"
+msgstr "Rehabilitation will begin as soon as possible. \n Please stop nagging us."
 msgid "spyder_route3_drag1" 
 msgstr "AGENT: What happened to the excavation? \n SHAFT BOSS: We got ... interrupted. By ... a kid. \n AGENT: A kid?! \n SHAFT BOSS: But we did manage to recover one ... \n AGENT: Hush! You know that's top secret. Alright, hand it over and scram! \n SHAFT BOSS: Okay, here ... uh!" 
 msgid "spyder_route3_drag2" 
@@ -4794,23 +5464,16 @@ msgid "_mk01alpha"
 msgstr "Mk01 Alpha"
 
 
-
 ## MESSAGE TRANSLATIONS ##
 # spyder messages
 msgid "spyder_multi_underrepairs"
 msgstr "The sign reads, 'Under repairs'"
-
-msgid "spyder_papertown_townsign"
-msgstr "Paper Town: The gateway to Fondent!"
 
 msgid "spyder_multi_martsign"
 msgstr "Buy things here"
 
 msgid "spyder_papertown_daycare1"
 msgstr "Daycare Centre: Under construction."
-
-msgid "spyder_route1_routesign"
-msgstr "Route 1: Take care!"
 
 msgid "spyder_papertown_daycare2"
 msgstr "Daycare Centre: Open now!"
@@ -4830,12 +5493,6 @@ msgstr "What's on TV? A prom queen is breaking her tiara into pieces and handing
 msgid "spyder_citypark_achievement"
 msgstr "Achievement Maniac's House: Closed."
 
-msgid "spyder_cottontown_townsign" 
-msgstr "Welcome to Cotton Town: A growing force." 
-msgid "spyder_route2_routesign" 
-msgstr "Welcome to Route 2: The historic path." 
-msgid "spyder_citypark_routesign" 
-msgstr "City Park: A taste of the wild." 
 msgid "spyder_column1_sign" 
 msgstr "A rare ancient column. This was once part of a temple building." 
 msgid "spyder_column2_sign" 
@@ -4864,10 +5521,6 @@ msgid "spyder_nimrod3_plaque"
 msgstr "The symbol of an ancient empire was the Eaglace, because when the empire invaded from the icy north their generals and scouts rode on Eaglace. \n Today, medic teams in our mighty republic are training with Agnidon for protection and transport. "
 msgid "spyder_nimrod4_plaque"
 msgstr "But soon, tuxemon and humans may be rendered obsolete. \n Our corporate sponsors Nimrod are developing robot technology that could make war a bloodless affair. \n In the meantime, sign up for the Nimrod Enforcers for good pay, free education and a life of adventure."
-msgid "spyder_route3_sign"
-msgstr "Route 3: Rehabilitation will begin as soon as possible. \n Please stop nagging us."
-msgid "spyder_leathertown_sign"
-msgstr "Leather Town: Proof that beauty and mining can co-exist."
 msgid "spyder_shaft1_sign"
 msgstr "Shaft Headquarters: Mining Division"
 msgid "spyder_shaft2_sign"
@@ -4877,10 +5530,6 @@ msgstr "Open Air Cafe and Marketplace"
 msgid "spyder_leathercbd_sign"
 msgstr "Leather Town Business District"
 
-msgid "spyder_flower_sign"
-msgstr "Flower City: Uniforms that guard you while you sleep"
-msgid "spyder_route5_sign"
-msgstr "The memorial passage to Timber Town"
 msgid "spyder_leatherhouse1_radio"
 msgstr "An R&B song is playing. It's called \"Possessuns, Part II\"."
 msgid "spyder_flower_dojo_sign"
@@ -4891,40 +5540,8 @@ msgstr "Welcome to the Wayfarer Inn! "
 msgid "spyder_omnichannel_note"
 msgstr "Haha, suckers - you'll never find me. \n It's on the Omnichannel CEO's letterhead."
 
-
 msgid "spyder_cottonhouse1_tvwatch"
 msgstr "It's the latest reality show: people and their tuxemon complete challenges on a remote island."
-msgid "spyder_timber_sign"
-msgstr "Timber Town: Breadbasket of Fondant."
-
-
-## Item descriptions ##
-
-msgid "fishing_rod"
-msgstr "Fishing Rod"
-msgid "fishing_rod_description"
-msgstr "Catch fish."
-msgid "earthmover_key"
-msgstr "Earthmover Key"
-msgid "earthmover_key_description"
-msgstr "Could come in handy if there's a giant earthmover blocking the path."
-
-msgid "sledgehammer_description"
-msgstr "Smash apart grey boulders."
-msgid "sledgehammer"
-msgstr "Sledgehammer"
-msgid "timber"
-msgstr "Timber Town"
-msgid "flower"
-msgstr "Flower City"
-msgid "paper"
-msgstr "Paper Town"
-msgid "candy"
-msgstr "Candy Town"
-msgid "cotton"
-msgstr "Cotton Town"
-msgid "leather"
-msgstr "Leather Town"
 
 msgid "cannot_use_item_monster"
 msgstr "This item cannot be used on this monster."
@@ -4992,7 +5609,7 @@ msgid "gotfivetuxeballs"
 msgstr "You got 5 Tuxeballs!"
 
 msgid "got_new_tuxemon"
-msgstr "You got a ${{monster_name}}!"
+msgstr "A new Tuxemon is born! Welcome {monster_name}!"
 
 msgid "spyder_greenwash_guard"
 msgstr "Alright, alright, nothing to see here."
@@ -5059,18 +5676,6 @@ msgid "taba_town_sign_tuxemart"
 msgstr "Tuxemart - A place to buy and sell items"
 msgid "taba_town_sign_tuxecenter"
 msgstr "Tuxecenter - A place to heal your tuxemon"
-msgid "taba_town_sign"
-msgstr "Taba Town - A peaceful refuge"
-msgid "taba_town_route20"
-msgstr "Route 20"
 
-msgid "route2_to_cotton"
-msgstr "^ Route 2 --- Cotton Town v"
-
-msgid "leather_town_sign_leather_route"
-msgstr "v Leather Town --- Route 3 ^"
 msgid "leather_town_open_air"
 msgstr "Open Air Cafe and Marketplace"
-
-msgid "citypark_route_sign"
-msgstr "v City Park --- Leather Town ^"
